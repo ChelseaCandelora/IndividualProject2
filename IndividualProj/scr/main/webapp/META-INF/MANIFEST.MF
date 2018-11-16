@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: store
+Implementation-Version: 2.0.3.RELEASE
+Built-By: sajid
+Implementation-Vendor-Id: com.store.rest
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_181
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/store
+

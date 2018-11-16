@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+
+    * {
+    box-sizing: border-box;
+}
+/* Create two equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn.active {
+    background-color: #666;
+    color: white;
+}
+}
+</style>
+</head>
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Top header -->
+  <header class="w3-container w3-xxlarge w3-padding-40 w3-light-blue">
+    <p class="w3-left w3-text-white">Welcome to the Online Store</p>
+    <p class="w3-right w3-text-white">
+      <i class="fa fa-shopping-cart w3-margin-right"></i>
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <div class="w3-container w3-text-grey">
+    <p>10 items</p>
+      </div>
+
+  <!-- Product grid -->
+  <div class="w3-row">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+       <div class="w3-display-container">
+        <img src="css/images/redshorts.jpg.jpeg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="w3-button w3-black">Add to Cart</button>
+          </div>
+        </div>
+        <p>Male's Shorts Red<br><b>$874.35</b></p>
+          <p class="w3-dropdown-hover">More Details
+              <span class="w3-dropdown-content w3-light-blue w3-padding">Description: Modern Small Red Male's shorts
+                  Brand Name: Generic
+                  Size: Small</span>
+          </p>
+      </div>
+      <div class="w3-container">
+<div class="w3-display-container">
+        <img src="css/images/shirt.jpg.jpeg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="w3-button w3-black">Add to Cart</button>
+          </div>
+        </div>
+        <p>Female’s Shirt Black<br><b>$141.34</b></p>
+          <p class="w3-dropdown-hover">More Details
+              <span class="w3-dropdown-content w3-light-blue w3-padding">Description: Classic Medium Black Female's shirt
+                  Brand Name: Generic
+                  Size: Medium</span>
+          </p>
+      </div>
+    <div class="w3-container">
+    <div class="w3-display-container">
+        <img src="css/images/whitesweater.jpg.jpeg" style="width:100%">
+<div class="w3-display-middle w3-display-hover">
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="w3-button w3-black">Add to Cart</button>
+          </div>
+        </div>
+        <p>Male’s Sweater White<br><b>$373.92</b></p>
+        <p class="w3-dropdown-hover">More Details
+            <span class="w3-dropdown-content w3-light-blue w3-padding">Description: Stylish Small White Male's sweater
+                  Brand Name: Generic
+                  Size: Small</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="css/images/mensorangesweater.jpg.jpeg" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="w3-button w3-black">Add to Cart</button>
+          </div>
+        </div>
+        <p>Male’s Sweater Orange<br><b>$813.18</b></p>
+          <p class="w3-dropdown-hover">More Details
+              <span class="w3-dropdown-content w3-light-blue w3-padding">Description: Stylish Large Orange Male's sweater
+                  Brand Name: Generic
+                  Size: Large</span>
+          </p>
+      </div>
+
+
+      <div class="w3-container">
+      <div class="w3-display-container">
+        <img src="css/images/white sandal.jpg.jpeg" style="width:100%">
+<div class="w3-display-middle w3-display-hover">
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="w3-button w3-black">Add to Cart</button>
+          </div>
+        </div>
+        <p>Female’s Sandal White<br><b>$685.10</b></p>
+          <p class="w3-dropdown-hover">More Details
+              <span class="w3-dropdown-content w3-light-blue w3-padding">Description: Modern XSmall White Female's sandal
+                  Brand Name: Generic
+                  Size: XSmall</span>
+          </p>
+      </div>
+
+<div class="w3-container">
+        <div class="w3-display-container">
+        <img src="css/images/bluesandal.jpg.jpeg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="w3-button w3-black">Add to Cart</button>
+          </div>
+        </div>
+        <p>Female’s Sandal Blue<br><b>$1097.50</b></p>
+    <p class="w3-dropdown-hover">More Details
+        <span class="w3-dropdown-content w3-light-blue w3-padding">Description:  Modern Medium Blue Female's sandal
+                  Brand Name: Generic
+                  Size: Medium</span>
+    </p>
+      </div>
+    </div>
+
+
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+        <img src="css/images/mensblueboots.jpg.jpeg" style="width:100%">
+       <div class="w3-display-middle w3-display-hover">
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="w3-button w3-black">Add to Cart</button>
+          </div>
+        </div>
+        <p>Male’s Boot Blue<br><b>$1200.49</b></p>
+          <p class="w3-dropdown-hover">More Details
+              <span class="w3-dropdown-content w3-light-blue w3-padding">Description:  Classic Small Blue Male's boot
+                  Brand Name: Generic
+                  Size: Small</span>
+          </p>
+      </div>
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="css/images/women'sred.jpg" style="width:100%">
+          <div class="w3-display-middle w3-display-hover">
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="w3-button w3-black">Add to Cart</button>
+          </div>
+        </div>
+        <p>Female’s Pants Red<br><b class="w3-text">$151.59</b></p>
+          <p class="w3-dropdown-hover">More Details
+              <span class="w3-dropdown-content w3-light-blue w3-padding">Description:  Stylish Medium Red Female's pants
+                  Brand Name: Generic
+                  Size: Medium</span>
+          </p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+      <div class="w3-display-container">
+        <img src="css/images/blackshorts.jpg-1.jpeg" style="width:100%">
+        <div class="w3-display-middle w3-display-hover">
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="w3-button w3-black">Add to Cart</button>
+          </div>
+        </div>
+        <p>Male’s Shorts Black<br><b>$1071.37</b></p>
+          <p class="w3-dropdown-hover">More Details
+              <span class="w3-dropdown-content w3-light-blue w3-padding">Description:  Modern Large Black Male's shorts
+                  Brand Name: Generic
+                  Size: Large</span>
+          </p>
+      </div>
+      <div class="w3-container">
+      <div class="w3-display-container">
+        <img src="css/images/orangeshirt.jpg.jpeg" style="width:100%">
+<div class="w3-display-middle w3-display-hover">
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" class="w3-button w3-black">Add to Cart</button>
+
+          </div>
+        </div>
+        <p>Female’s Shirt Orange<br><b>$1000.61</b></p>
+          <p class="w3-dropdown-hover">More Details
+              <span class="w3-dropdown-content w3-light-blue w3-padding">Description:  Classic XSmall Orange Female's shirt
+                  Brand Name: Generic
+                  Size: XSmall</span>
+          </p>
+      </div>
+    </div>
+
+  </div>
+
+  
+  <!-- Footer -->
+  <footer class="w3-padding-40 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding"> 
+
+      <div class="w3-col s4 w3-justify">
+        <h4>We accept</h4>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+        <br>
+       
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+<div id="id01" class="modal">
+
+    <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="css/images/img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <button type="submit">Login</button>
+            <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+</div>
+
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+
+
+
+</body>
+</html>
